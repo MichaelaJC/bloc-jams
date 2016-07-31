@@ -22,7 +22,12 @@ html {
      position: relative; /* positioning will be explained in a resource */
      left: 2rem;
  }
+<<<<<<< HEAD
  .hero-content {
+=======
+
+.hero-content {
+>>>>>>> checkpoint3
      position: relative; /* positioning will be explained in a resource */
      min-height: 600px;  /* hero content element must be _at least_ 600 pixels */
      background-image: url(../assets/images/bloc_jams_bg.jpg);
@@ -30,7 +35,12 @@ html {
      background-position: center center;
      background-size: cover;
  }
+<<<<<<< HEAD
 .hero-content .hero-title {
+=======
+
+ .hero-content .hero-title {
+>>>>>>> checkpoint3
      position: absolute;             /* positioning will be explained in a resource */
      top: 40%;                       /* positioning will be explained in a resource */
      -webkit-transform: translateY(-50%);
@@ -45,7 +55,12 @@ html {
      letter-spacing: 0.5rem;         /* puts 0.5 root ems worth of space between each letter */
      text-shadow: 1px 1px 0px rgb(58,23,63); /* creates a shadow underneath the text for readability over the image */
  }
+<<<<<<< HEAD
 .selling-points {
+=======
+
+ .selling-points {
+>>>>>>> checkpoint3
      position: relative;
      display: table;
      width: 100%;
@@ -71,4 +86,9 @@ html {
  .ion-iphone {
      color: rgb(233,50,117);
      font-size: 5rem;
+<<<<<<< HEAD
  }
+=======
+ }
+
+>>>>>>> checkpoint3
