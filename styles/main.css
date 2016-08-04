@@ -16,13 +16,52 @@ html {
  }
  
   .navbar {
+     position: relative;
      padding: 0.5rem;
-     background-color: rgb(101,18,95);
+     /* adds a fourth argument for opacity of 0.5*/
+     background-color: rgba(101,18,95,0.5);
+     /* adds a third dimension to the placement of an element*/
+     z-index: 1;
  }
  
- .navbar > .logo {
+ .navbar .logo {
      position: relative; 
      left: 2rem;
+     cursor: pointer;
+ }
+
+.navbar .links-container {
+     display: table;
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 100px;
+     color: white;
+     /* changes the decorative properties of text allowing for underline strikethrough and other text decorations etc... */
+     text-decoration: none;
+ }
+ 
+ .links-container .navbar-link {
+     display: table-cell;
+     position: relative;
+     height: 100%;
+     padding-left: 1rem;
+     padding-right: 1rem;
+     /* orients inline or table-cell content vertically */
+     vertical-align: middle;
+     color: white;
+     font-size: 0.625rem;
+     letter-spacing: 0.05rem;
+     font-weight: 700;
+     text-transform: uppercase;
+     /* #3 */
+     text-decoration: none;
+     cursor: pointer;
+ }
+ 
+   /* hover statement of an element occurs when a cursor mouses over it */
+ .links-container .navbar-link:hover {
+     color: rgb(233,50,117);
  }
 
 .container {
