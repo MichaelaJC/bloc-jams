@@ -26,6 +26,20 @@ var albumMarconi = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+var albumMonet = {
+     title: 'The Waterlilies',
+     artist: 'Claude Monet',
+     label: 'Paris',
+     year: '1922',
+     albumArtUrl: 'assets/images/album_covers/01.png',
+     songs: [
+         { title: 'Water Lilies', duration: '4:26' },
+         { title: 'Water-Lily Pond', duration: '3:14' },
+         { title: 'Wisteria', duration: '5:01' },
+         { title: 'Le bassin Aux Nympheas', duration: '3:21'},
+         { title: 'Nympheas reflet de saule', duration: '2:15'}
+     ]
+ };
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -43,7 +57,6 @@ var setCurrentAlbum = function(album) {
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
      var albumImage = document.getElementsByClassName('album-cover-art')[0];
      var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
- 
 
      albumTitle.firstChild.nodeValue = album.title;
      albumArtist.firstChild.nodeValue = album.artist;
