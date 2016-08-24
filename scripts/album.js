@@ -12,6 +12,7 @@ var albumPicasso = {
          { title: 'Magenta', duration: '2:15'}
      ]
  };
+
 var albumMarconi = {
      title: 'The Telephone',
      artist: 'Guglielmo Marconi',
@@ -26,12 +27,13 @@ var albumMarconi = {
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+
 var albumMonet = {
      title: 'The Waterlilies',
      artist: 'Claude Monet',
      label: 'Paris',
      year: '1922',
-     albumArtUrl: 'assets/images/album_covers/01.png',
+     albumArtUrl: 'assets/images/album_covers/Monet.jpg',
      songs: [
          { title: 'Water Lilies', duration: '4:26' },
          { title: 'Water-Lily Pond', duration: '3:14' },
@@ -40,6 +42,10 @@ var albumMonet = {
          { title: 'Nympheas reflet de saule', duration: '2:15'}
      ]
  };
+
+var albums = [albumPicasso, albumMarconi, albumMonet];
+var currentAlbumIndex = 0;
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -51,7 +57,9 @@ var createSongRow = function(songNumber, songName, songLength) {
  
      return template;
  };
+
 var setCurrentAlbum = function(album) {
+     console.log(album);
      var albumTitle = document.getElementsByClassName('album-view-title')[0];
      var albumArtist = document.getElementsByClassName('album-view-artist')[0];
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
@@ -74,7 +82,16 @@ var setCurrentAlbum = function(album) {
      setCurrentAlbum(albumPicasso);
  };
 
+document.getElementsByClassName('album-cover-art')[0].addEventListener("click", function() {
+    nextAlbum();
+});
+
 function nextAlbum(){
-    var albums = [albumPicasso, albumMarconi, albumMonet];
-    album.addEventListener("click", setCurrentAlbum(albums++), false);
+    console.log(currentAlbumIndex);
+    if (currentAlbumIndex >= albums.length - 1){
+        currentAlbumIndex = 0;
+    } else {
+        currentAlbumIndex++;
+    }
+    setCurrentAlbum(albums[currentAlbumIndex]);
 }
